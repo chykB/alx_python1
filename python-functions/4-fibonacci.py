@@ -6,5 +6,5 @@ def fibonacci_sequence(n):
     while len(fib_num) < n:
         next_num = fib_num[-1] + fib_num[-2]
         fib_num.append(next_num)
-    return fib_num
+    return fib_num[:n]
 
