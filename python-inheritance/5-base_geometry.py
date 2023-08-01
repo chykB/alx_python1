@@ -3,8 +3,12 @@
 
 
 class BaseGeometry:
-    """a method that calculates the area but will notbe implemented"""
+    """a method that excludes the __init_subclass__ from the dir"""
+    def __dir__(cls) -> None:
+        attributes = super().__dir__()
+        return [attribute for attribute in attributes if attribute != "__init_subclass__"]
 
+    """a method that calculates the area but is not implemented""" 
     def area(self):
         """an exception raised"""
         raise Exception("area() is not implemented")
