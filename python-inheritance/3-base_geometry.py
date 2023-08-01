@@ -4,4 +4,3 @@
 
 class BaseGeometry:
     """this is an empty class"""
-    pass
