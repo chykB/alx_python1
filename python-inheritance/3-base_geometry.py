@@ -4,7 +4,6 @@
 
 class BaseGeometry:
     """this is an empty class"""
-    pass
     
     def __dir__(cls) -> None:
         """listt all attribute of this class exclude the __init__subclass"""
