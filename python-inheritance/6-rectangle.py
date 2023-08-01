@@ -3,10 +3,6 @@
 
 
 class BaseGeometry:
-    """a method that excludes the __init_subclass__ from the dir"""
-    def __dir__(cls) -> None:
-        attributes = super().__dir__()
-        return [attribute for attribute in attributes if attribute != "__init_subclass__"]
 
     """a method that calculates the area but is not implemented"""
     def area(self):
@@ -30,10 +26,10 @@ class BaseGeometry:
 """a subclass Rectangle"""
 class Rectangle(BaseGeometry):
     
-    """override the init subclass"""
-    class HideInitSubclassMeta(type):
-        def __dir__(self):
-            return [attr for attr in super().__dir__() if attr != "__init_subclass__"]
+    """a method that excludes the __init_subclass__ from the dir"""
+    def __dir__(cls) -> None:
+        attributes = super().__dir__()
+        return [attribute for attribute in attributes if attribute != "__init_subclass__"]
 
 
     """Instantiation with width and height"""
