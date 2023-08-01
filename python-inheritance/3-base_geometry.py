@@ -9,4 +9,4 @@ class BaseGeometry:
     def __dir__(cls) -> None:
         """listt all attribute of this class exclude the __init__subclass"""
         attributes = super().__dir__()
-        return [attribute for attribute in attributes if attribute != "__init__subclass"]
+        return [attribute for attribute in attributes if attribute != "__init_subclass__"]
