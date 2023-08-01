@@ -29,6 +29,10 @@ class BaseGeometry:
 
 """a subclass Rectangle"""
 class Rectangle(BaseGeometry):
+    
+    """override the init subclass"""
+    def __init_subclass(cls, **kwargs):
+        pass
 
 
     """Instantiation with width and height"""
