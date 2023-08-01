@@ -32,9 +32,8 @@ class Rectangle(BaseGeometry):
     
     """override the init subclass"""
     class HideInitSubclassMeta(type):
-        """hide """
         def __dir__(self):
-        return [attr for attr in super().__dir__() if attr != "__init_subclass__"]
+            return [attr for attr in super().__dir__() if attr != "__init_subclass__"]
 
 
     """Instantiation with width and height"""
