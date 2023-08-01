@@ -31,7 +31,7 @@ class BaseGeometry:
 class Rectangle(BaseGeometry):
     """excluding the dir subclass from the dir list"""
     def __dir__(cls) -> None:
-        attributes = Rectangle().__dir__()
+        attributes = super().__dir__()
         return [attribute for attribute in attributes if attribute != "__init_subclass__"]
 
 
