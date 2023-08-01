@@ -5,7 +5,11 @@
 class BaseGeometry:
     """this is an empty class"""
     
-    def __dir__(cls) -> None:
-        """listt all attribute of this class exclude the __init__subclass"""
+     def __dir__(cls) -> None:
+        """list all attribute except the __init_subclass__"""
         attributes = super().__dir__()
-        return [attribute for attribute in attributes if attribute != "__init_subclass__"]
+        dir_to_return = []
+        for attribute in attributes:
+            if attribute != "__init_subclass__":
+                dir_to_return.append(attribute)
+        return dir_to_return
