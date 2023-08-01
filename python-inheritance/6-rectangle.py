@@ -31,7 +31,7 @@ class BaseGeometry:
 class Rectangle(BaseGeometry):
     
     """override the init subclass"""
-    def __init_subclass(cls, **kwargs):
+    def __init_subclass__(cls, **kwargs):
         pass
 
 
