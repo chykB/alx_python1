@@ -27,7 +27,7 @@ class BaseGeometry:
         else:
             raise TypeError("{} must be an integer".format(name))
 
-"""a subclass Rectangle"""
+    """a subclass Rectangle"""
 class Rectangle(BaseGeometry):
 
     """a method that excludes the __init_subclass__ from the dir"""
@@ -50,3 +50,14 @@ class Rectangle(BaseGeometry):
     """print out rectangle description"""
     def __str__(self):
         return "[Rectangle] {}/{}".format(self.__width, self.__height)
+
+"""a subclas Square that inherits from the class Rectangle"""
+class Square(BaseGeometry):
+    """instantiate with size whic is private"""
+    def __init__(self, size):
+        super().__init__() 
+        self.__size = size
+        self.integer_validator("size", size)
+
+    def area(self):
+        return self.__size ** 2
