@@ -53,6 +53,12 @@ class Rectangle(BaseGeometry):
 
 """a subclas Square that inherits from the class Rectangle"""
 class Square(BaseGeometry):
+     """a method that excludes the __init_subclass__ from the dir"""
+    def __dir__(self) -> None:
+        attributes = dir(self).__dir__()
+        return [attribute for attribute in attributes if attribute != "__init_subclass__"]
+
+
     """instantiate with size whic is private"""
     def __init__(self, size):
         super().__init__() 
