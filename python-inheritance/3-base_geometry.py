@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 
 """a class module BaseGeometry"""
+
+
 class BaseGeometry:
-    """this is an empty class"""
-    
+    """this is an empty class"""    
      def __dir__(cls) -> None:
         """
            list all attribute except the __init_subclass__
