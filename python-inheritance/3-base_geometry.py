@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 
-"""a class module BaseGeometry"""
-
-
+"""an empty class BaseGeometry"""
 class BaseGeometry:
     """this is an empty class"""    
      def __dir__(cls) -> None:
