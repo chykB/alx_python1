@@ -6,7 +6,7 @@ class meta_class(type):
     """
         this class is inherit from a default class type
     """
-    def __init__(cls):
+    def __dir__(cls):
         """this method will overide the dir method"""
         return [attr for attr in super()._dir__() if atr != "__init_subclass__"] 
 
