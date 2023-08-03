@@ -1,8 +1,14 @@
 #!/usr/bin/python3
 """a base moduleclass"""
 
+class metaClass(type):
+    """a meta class"""
+    def __dir__(cls):
+        """this method exclude the init subclass from the dir"""
+        return [attr for attr in super().__dir__() if attr != "__init_subclass__"
 
-class BaseGeometry:
+
+class BaseGeometry(metaClass):
 
     """a method that calculates the area but is not implemented"""
     def area(self):
