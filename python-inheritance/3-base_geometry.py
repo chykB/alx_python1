@@ -2,6 +2,14 @@
 """a class module BaseGeometry"""
 
 
+class meta_class(type):
+    """
+        this class is inherit from a default class type
+    """
+    def __init__(cls):
+        """this method will overide the dir method"""
+        return [attr for attr in super()._dir__() if atr != "__init_subclass__"] 
+
 class BaseGeometry:
     """a method that the area but it is not implemented"""
 
