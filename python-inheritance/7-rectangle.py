@@ -1,8 +1,13 @@
 #!/usr/bin/python3
 """a base moduleclass"""
 
+class metaClass(type):
+    """this is the parent class of BaseGeomtery"""
+    def __dir__(cls):
+        """this method will take out the __init_subclass from dir"""
+        return [attr for attr in super().__dir__() if attr != "__init_subclass__"]
 
-class BaseGeometry:
+class BaseGeometry(metaclass=metaClass):
     """a method that excludes the __init_subclass__ from the dir"""
     def __dir__(cls) -> None:
         attributes = super().__dir__()
