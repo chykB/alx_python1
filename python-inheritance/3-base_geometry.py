@@ -8,9 +8,9 @@ class meta_class(type):
     """
     def __dir__(cls):
         """this method will overide the dir method"""
-        return [attr for attr in super()._dir__() if atr != "__init_subclass__"] 
+        return [attr for attr in super().__dir__() if attr != "__init_subclass__"] 
 
-class BaseGeometry:
+class BaseGeometry(metaclass=meta_class):
     """a method that the area but it is not implemented"""
 
 
