@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 """a base moduleclass"""
 
+
 class meta_class(type):
     """a meta class"""
     def __dir__(cls):
-        return [attr for attr in super().__dir__() if attr != "__init_subclass__"]
+        return [attr for attr in super().__dir__() 
+                if attr != "__init_subclass__"]
 
 class BaseGeometry(metaclass=meta_class):
     """a method that excludes the __init_subclass__ from the dir"""
@@ -12,13 +14,13 @@ class BaseGeometry(metaclass=meta_class):
     def __dir__(cls) -> None:
         """this method exclude th init subclass from the dir"""
         attributes = super().__dir__()
-        return [attribute for attribute in attributes if attribute != "__init_subclass__"]
+        return [attribute for attribute in attributes 
+                if attribute != "__init_subclass__"]
 
     """a method that calculates the area but is not implemented"""
     def area(self):
         """an exception raised"""
         raise Exception("area() is not implemented")
-
 
     def integer_validator(self, name, value):
         """
@@ -33,14 +35,17 @@ class BaseGeometry(metaclass=meta_class):
         else:
             raise TypeError("{} must be an integer".format(name))
 
-    """a subclass Rectangle"""
+
+
+"""a subclass Rectangle"""
 class Rectangle(BaseGeometry):
 
     """a method that excludes the __init_subclass__ from the dir"""
     def __dir__(cls) -> None:
         """ excluding the ini subclassin thedir"""
         attributes = super().__dir__()
-        return [attribute for attribute in attributes if attribute != "__init_subclass__"]
+        return [attribute for attribute in attributes 
+                if attribute != "__init_subclass__"]
 
     def __init__(self, width, height):
         """Instantiation with width and height"""
@@ -49,15 +54,14 @@ class Rectangle(BaseGeometry):
         self.integer_validator("width", width)
         self.integer_validator("height", height)
 
-
     def area(self):
         """the area of the rectangle implemented"""
         return self.__width * self.__height
 
-
     def __str__(self):
         """print out rectangle description"""
         return "[Rectangle] {}/{}".format(self.__width, self.__height)
+
 
 """a subclas Square that inherits from the class Rectangle"""
 class Square(BaseGeometry):
