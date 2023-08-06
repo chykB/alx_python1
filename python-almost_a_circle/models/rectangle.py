@@ -16,7 +16,7 @@ class Base:
             self.id = Base.__nb_objects
 
 class Rectangle(Base):
-    """the Rectangle classinerits from the Base class"""
+    """the Rectangle class inherits from the Base class"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Rectangle  class constructor"""
