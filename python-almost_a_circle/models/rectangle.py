@@ -29,41 +29,41 @@ class Rectangle(Base):
         @property
         def width(self):
             """the getter method"""
-            self.__width = width
+            return self.__width
 
         @width.setter
-        def width(self, width):
+        def width(self, value):
             """the setter method"""
-            self.__width = width
+            self.__width = value
 
         @property
         def height(self):
             """the getter method"""
-            self.__height = height
+            return self.__height
 
         @height.setter
-        def height(self, height):
+        def height(self, value):
             """the setter method"""
-            self.__height = height
+            self.__height = value
 
         @property
         def x(self):
             """the getter method"""
-            self.__x = x
+            return self.__x
             
         @x.setter
-        def x(self, x):
+        def x(self, value):
             """the setter method"""
-            self.__x = x
+            self.__x = value
 
 
         @property
         def y(self):
             """the getter method"""
-            self.__y = y
+            return self.__y
             
         @y.setter
-        def y(self, y):
+        def y(self, value):
             """the setter method"""
-            self.__y = y
+            self.__y = value
 
