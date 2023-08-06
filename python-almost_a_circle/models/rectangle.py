@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""importing from the Base class"""
 from models.Base import Base
 """a rectangle that inherits from the module Base"""
 
