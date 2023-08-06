@@ -1,19 +1,6 @@
 #!/usr/bin/python3
-"""the module Base"""
-
-class Base:
-    """
-    this base class is the super class
-    """
-    __nb_objects = 0
-
-    def __init__(self, id=None):
-        """the object constructor"""
-        if id is not None:
-            self.id = id
-        else:
-            Base.__nb_objects += 1
-            self.id = Base.__nb_objects
+from models.Base import Base
+"""a rectangle that inherits from the module Base"""
 
 class Rectangle(Base):
     """the Rectangle classinerits from the Base class"""
