@@ -3,7 +3,7 @@
 
 
 class Base:
-    """this base class will serve as a super class to 
+    """this base class will serve as a super class to
     other classes in this module"""
     __nb_objects = 0
 
