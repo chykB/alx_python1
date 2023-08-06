@@ -37,33 +37,33 @@ class Rectangle(Base):
             self.__width = width
 
         @property
-        def width(self):
+        def height(self):
             """the getter method"""
             self.__height = height
 
-        @width.setter
-        def width(self, height):
+        @height.setter
+        def height(self, height):
             """the setter method"""
             self.__height = height
 
         @property
-        def width(self):
+        def x(self):
             """the getter method"""
             self.__x = x
             
-        @width.setter
-        def width(self, x):
+        @x.setter
+        def x(self, x):
             """the setter method"""
             self.__x = x
 
 
         @property
-        def width(self):
+        def y(self):
             """the getter method"""
             self.__y = y
             
-        @width.setter
-        def width(self, y):
+        @y.setter
+        def y(self, y):
             """the setter method"""
             self.__y = y
 
