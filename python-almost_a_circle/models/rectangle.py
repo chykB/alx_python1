@@ -15,21 +15,20 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
 
+
+
     @property
     def width(self):
-        """The getter method for width"""
+        """Set/get the width of the Rectangle."""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """The setter method for width"""
-        if type(value) is int:
-            if value < 0:
-                raise ValueError("width must be >= 0")
-            else:
-                self.__width = value
-        else:
+        if type(value) != int:
             raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
+        self.__width = value
 
     @property
     def height(self):
@@ -39,13 +38,11 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """The setter method for height"""
-        if type(value) is int:
-            if value < 0:
-                raise ValueError("height must be >= 0")
-            else:
-                self.__height = value
-        else:
+        if type(value) != int:
             raise TypeError("height must be an integer")
+        if value <= 0:
+            raise ValueError("height must be > 0")
+        self.__height = value
 
     @property
     def x(self):
@@ -55,10 +52,11 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """The setter method for x"""
+        if type(value) != int:
+            raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
-        else:
-            self.__x = value
+        self.__x = value
 
     @property
     def y(self):
@@ -68,7 +66,8 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """The setter method for y"""
+        if type(value) != int:
+            raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
-        else:
-            self.__y = value
+        self.__y = value
