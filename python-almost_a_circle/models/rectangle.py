@@ -123,6 +123,6 @@ class Rectangle(Base):
 
     def update(self, *args):
         """this method assigns an argument to each attribute"""
-        attribute = ['self.id', 'self.__width', 'self.__height', 'self.__x', 'self.__y']
+        attribute = ['self.id', 'self.width', 'self.height', 'self.x', 'self.y']
         for i, arg in enumerate(args):
             setattr(self, attribute[i], arg)
