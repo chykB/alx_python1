@@ -119,3 +119,10 @@ class Rectangle(Base):
     def __str__(self):
         """this method convert object to string"""
         return str("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height))
+
+
+    def update(self, *args):
+        if args:
+            attribute = ['self.id', 'self.__width', 'self.__height', 'self.__x', 'self.__y']
+            for i, value in enumerate(args):
+                setattr(self, attribute[i], value)
