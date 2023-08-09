@@ -8,7 +8,7 @@ def get_x_request_id(url, x_request_id):
   response = requests.get(url, headers=headers)
   return response.headers['X-Request-Id']
 if __name__== "__main__":
-    if len(sys.argv) <= 1:
+    if len(sys.argv) < 3:
         sys.exit(1)
     url = sys.argv[1]
     x_request_id = sys.argv[2]
