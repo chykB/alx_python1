@@ -2,8 +2,9 @@
 """importing requests module and sys packages"""
 
 import requests
+"""requests module"""
 import sys
-"""requests module  and sys package"""
+"""sys package"""
 
 def get_x_request_id(url):
     """Gets the value of the X-Request-Id header in the response to a request to the specified URL"""
