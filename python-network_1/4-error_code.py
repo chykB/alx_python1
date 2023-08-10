@@ -9,15 +9,14 @@ import sys
 
 def get_response(url):
   """Sends a GET request to the specified URL and prints the body of the response."""
-  res = requests.get(url)
-  return res
+  response = requests.get(url)
+  return response
 
 if __name__ == "__main__":
   url = sys.argv[1]
-  res = get_response(url)
-  print("HTTP status code:", res.status_code)
+  response = get_response(url)
   
-  if res.status_code > 400:
-    print('Error code: {}'.format(res.status_code))
+  if response.status_code > 400:
+    print('Error code: {}'.format(response.status_code))
   else:
-    print(res.text)
+    print(response.text)
