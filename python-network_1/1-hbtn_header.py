@@ -12,10 +12,10 @@ def get_request_id(url):
             print("Request id not found")
     except requests.exceptions.RequestException as e:
         print("Error: {}".format(e)
-        exit()
+        sys.exit(1)
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: python script.py <url>")
-        exit()
+        sys.exit(1)
     url = sys.argv[1]
     get_request_id(url)
