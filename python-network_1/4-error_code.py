@@ -15,6 +15,7 @@ def get_response(url):
 if __name__ == "__main__":
   url = sys.argv[1]
   res = get_response(url)
+  print("HTTP status code:", res.status_code)
   
   if res.status_code > 400:
     print('Error code: {}'.format(res.status_code))
