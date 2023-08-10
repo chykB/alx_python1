@@ -8,8 +8,9 @@ def post_email(url, email):
     return response.text
 if __name__== "__main__":
     if len(sys.argv) != 3:
+        print("Usage: {} <URL> <email>".format(sys.argv[0]))
         sys.exit(1)
-    url = 'http://localhost:5000/receive_email'
-    email = sys.argv[1]
+    url = sys.argv[1]
+    email = sys.argv[2]
     response = post_email(url, email)
     print(response)
