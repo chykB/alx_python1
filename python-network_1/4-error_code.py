@@ -8,7 +8,7 @@ def main():
 
   print(res.text)
   if res.status_code >= 400:
-    print("Error code:", res.status_cod)
+    print("Error code:".format(res.status_cod))
 
 if __name__ == "__main__":
   main()
