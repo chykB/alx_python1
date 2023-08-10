@@ -15,6 +15,7 @@ def main():
 
   if res.status_code >= 400:
     print('Error code: {}'.format(res.status_code))
+    sys.exit(1)
   else:
     print(res.text)
 
