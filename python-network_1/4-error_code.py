@@ -14,12 +14,9 @@ def get_response(url):
 
 if __name__ == "__main__":
   url = sys.argv[1]
-  with open('stdout.txt', 'w') as stdout_file:
-  with open('stderr.txt', 'w') as stderr_file:
   res = get_response(url)
   
   if res.status_code >= 400:
-    print('Error code: {}'.format(res.status_code), file=stderr_file)
-    sys.exit(1)
+    print('Error code: {}'.format(res.status_code))
   else:
-    print(res.text, file=stdout_file)
+    print(res.text)
