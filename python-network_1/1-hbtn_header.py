@@ -19,7 +19,7 @@ def get_request_id(url):
     x_request_id = res.headers.get('X-Request-Id')
   except requests.exceptions.RequestException as e:
     print('Error: {}'.format(e))
-    sys.exit(1)  # <-- This line is indented now.
+    sys.exit(1)
 
   return x_request_id
 
@@ -33,4 +33,4 @@ if __name__ == '__main__':
   if x_request_id:
     print(x_request_id)
   else:
-    print('Request id not found')
+      print('None')
