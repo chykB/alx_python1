@@ -15,7 +15,7 @@ def search_user(letter):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python script.py [letter]")
+        print("No result")
         sys.exit(1)
 
     letter = sys.argv[1]
