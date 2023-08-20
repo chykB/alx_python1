@@ -3,7 +3,7 @@ import MySQLdb
 import sys
 connect = MySQLdb.connect(
         host="localhost", user=sys.argv[1], password=sys.argv[2],
-        database=sys.argv[3], name=sys.argv[4], port=3306
+        database=sys.argv[3], port=3306
 )
 input_name = input("Enter a state name: ")
 cursor = connect.cursor()
