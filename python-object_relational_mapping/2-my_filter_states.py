@@ -7,7 +7,7 @@ connect = MySQLdb.connect(
 )
 input_name = sys.argv[4]
 cursor = connect.cursor()
-query = "SELECT * FROM states WHERE name LIKE '{}%' ORDER BY id ASC".format(inpu_name)
+query = "SELECT * FROM states WHERE name LIKE '{}%' ORDER BY id ASC".format(input_name)
 cursor.execute(query)
 for obj in cursor:
     print(obj)
