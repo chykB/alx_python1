@@ -7,10 +7,9 @@ connect = MySQLdb.connect(
 )
 cursor = connect.cursor()
 cursor.execute(
-        """SELECT cities.id, cities.name, state.name
+        """SELECT *
         FROM cities
-        INNER JOIN states ON states.id=cities.states.id
-        ORDER BY cities.id ASC;
+        ORDER BY id ASC;
         """
 )
 for row in cursor:
