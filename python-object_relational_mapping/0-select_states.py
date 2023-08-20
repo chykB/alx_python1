@@ -2,7 +2,7 @@
 """this script connect to MYSQL server, list all state from the database hbtn_0e_0_usa, it takes 3 argument"""
 import MySQLdb
 
-connect = MySQLdb.connect(host='localhost', user=mysql username, password=mysql password, database=database name, port=3306)
+connect = MySQLdb.connect(host='localhost', username='root', password='root', database='hbtn_0e_0_usa', port=3306)
 cursor = connect.cursor()
 query = "SELECT id, name FROM states ORDER BY id ASC"
 cursor.execute(query)
