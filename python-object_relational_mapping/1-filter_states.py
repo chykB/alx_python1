@@ -4,7 +4,7 @@ import MySQLdb
 import sys
 connect = MySQLdb.connect(
         host="localhost", user=sys.argv[1], password=sys.argv[2],
-        database=sysargv[3]
+        database=sys.argv[3]
 )
 cursor = connect.cursor()
 query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY ASC"
