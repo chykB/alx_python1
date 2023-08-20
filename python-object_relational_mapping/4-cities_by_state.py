@@ -10,8 +10,8 @@ cursor = connect.cursor()
 cursor.execute(
         """SELECT cities.id, cities.name, state.name
         FROM cities
-        INNER JOIN states ON states.id=cities.states.id, '%s' (state_name, )
-        ORDER BY id ASC;
+        INNER JOIN states ON states.id=cities.states.id
+        ORDER BY cities.id ASC;
         """
 )
 for row in cursor:
