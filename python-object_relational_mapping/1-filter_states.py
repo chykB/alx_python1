@@ -8,7 +8,7 @@ connect = MySQLdb.connect(
         database=sys.argv[3]
 )
 cursor = connect.cursor()
-query = "SELECT * FROM states WHERE UPPER(name) LIKE 'N%' ORDER BY id ASC;"
+query = "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id ASC;"
 cursor.execute(query)
 for row in cursor:
     print(row)
