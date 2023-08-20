@@ -7,12 +7,12 @@ connect = MySQLdb.connect(
 )
 input_name = sys.argv[4]
 cursor = connect.cursor()
-query = "
+query = """
     SELECT *
     FROM states
     WHERE name LIKE BINARY '{}%'
     ORDER BY id ASC;
-    ".format(input_name)
+    """.format(input_name)
 cursor.execute(query)
 for obj in cursor:
     print(obj)
