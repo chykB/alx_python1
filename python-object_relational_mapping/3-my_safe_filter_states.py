@@ -10,9 +10,9 @@ cursor = connect.cursor()
 query = """
     SELECT *
     FROM states
-    WHERE name LIKE BINARY '%s', (input_name, )
+    WHERE name LIKE BINARY '%s',
     ORDER BY id ASC;
-    """
+    """% input_name
 cursor.execute(query)
 for obj in cursor:
     print(obj)
