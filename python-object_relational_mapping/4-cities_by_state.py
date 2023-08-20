@@ -5,7 +5,6 @@ connect = MySQLdb.connect(
         host="localhost", user=sys.argv[1], password=sys.argv[2],
         database=sys.argv[3], port=3306
 )
-state_name = sys.argv[4]
 cursor = connect.cursor()
 cursor.execute(
         """SELECT cities.id, cities.name, state.name
