@@ -14,5 +14,5 @@ cursor.execute(
 )
 for row in cursor:
     print(row)
-    cursor.close()
-    connect.close()
+cursor.close()
+connect.close()
