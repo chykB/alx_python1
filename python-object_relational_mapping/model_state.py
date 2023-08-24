@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-"""
-state class and Base, an instance of declarative_base()
-"""
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, MetaData
 meta_data = MetaData()
 Base = declarative_base(MetaData=meta_data)
+"""
+state class and Base, an instance of declarative_base()
+"""
+
 class State(Base):
     """
     contains the class definition of a State and an instance Base = declarative_base() with id and name attributes of each state
