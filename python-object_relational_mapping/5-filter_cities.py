@@ -10,7 +10,7 @@ cursor.execute("""
         SELECT cities.name 
         FROM cities
         JOIN states ON cities.state_id = states.id
-        WHERE states.name = %s
+        WHERE states.name = "{}%"
         ORDER BY cities.id ASC;
         """) .format(state_name)
 for row in cursor:
