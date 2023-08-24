@@ -8,13 +8,19 @@ from sqlalchemy.orm import sessionmaker
 
 
 if __name__ == "__main__":
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
-                           .format(sys.argv[1], sys.argv[2], sys.argv[3]))
-    Base.metadata.create_all(engine)
+    connection = "mysql+mysqldb://{}:{}@localhost:3360/{}".format(sys.argv[1], sys.argv[2], sys.argv[3]
+    # Create engine and session
+    engine = create_engine(connection, pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
+
+    # Query to get all State objects sorted by id
     states = session.query(State).order_by(State.id).all()
+
+    # Print the results in the expected format
     for state in states:
-        print("{}: {}".format(state.id, state.name))
+        print(f"{state.id}: {state.name}")
+
+    session.close()
 
     session.close()
