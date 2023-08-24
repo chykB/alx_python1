@@ -12,7 +12,7 @@ cursor.execute("""
         JOIN states ON cities.state_id = states.id
         WHERE states.name = "{}%"
         ORDER BY cities.id ASC;
-        """) .format(state_name)
+        """, (state_name, ))
 for row in cursor:
     print(row)
 cursor.close()
