@@ -11,7 +11,7 @@ cursor.execute("""
         FROM cities
         JOIN states ON cities.state_id = states.id
         WHERE states.name = %s
-        ORDER BY cities.id
+        ORDER BY cities.id ASC;
         """) .format(state_name)
 for row in cursor:
     print(row)
