@@ -10,9 +10,9 @@ cursor.execute("""
         SELECT cities.name 
         FROM cities
         INNER JOIN states ON states.id = cities.states_id
-        WHERE states.name = "%s" state_name
+        WHERE states.name = "%s"
         ORDER BY cities.id ASC;
-        """)
+        """, (state_name,))
 for row in cursor:
     print(row)
 cursor.close()
