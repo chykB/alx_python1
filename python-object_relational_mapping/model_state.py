@@ -7,6 +7,8 @@ Base = declarative_base(MetaData=meta_data)
 state class and Base, an instance of declarative_base()
 """
 
+
+
 class State(Base):
     """
     contains the class definition of a State and an instance Base = declarative_base() with id and name attributes of each state
