@@ -6,7 +6,7 @@ meta_data = MetaData()
 Base = declarative_base(MetaData=meta_data)
 class State(Base):
     """
-    class with id and name attributes of each state
+    contains the class definition of a State and an instance Base = declarative_base() with id and name attributes of each state
     """
     __tablename__ = states
     id = Column(Integer, primary_key=True, unique=True, auto_increment=True, nullable=False)
