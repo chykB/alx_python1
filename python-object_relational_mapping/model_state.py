@@ -7,9 +7,10 @@ from sqlalchemy import Column, Integer, String
 
 Base = declarative_base()
 
+
 class State(Base):
     """
-    contains the class definition of a State and an instance 
+    contains the class definition of a State and an instance
     Base = declarative_base() with id and name attributes of each state
     """
     __tablename__ = 'states'
