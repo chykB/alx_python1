@@ -10,7 +10,7 @@ cursor.execute("""
         FROM cities
         INNER JOIN states ON states.id=cities.state_id
         WHERE states.name=%s""", (sys.argv[4],))
-rows = cur.fetchall()
+rows = cursor.fetchall()
 tmp = list(row[0] for row in rows)
 print(*tmp, sep=", ")
 cursor.close()
