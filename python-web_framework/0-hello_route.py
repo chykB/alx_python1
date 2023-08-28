@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 
 @app.route("/")
-def hello():
+def index():
     """
     The application has a single route, `/`,
     which calls the `index()` function
@@ -15,5 +15,4 @@ def hello():
     return "<p>Hello HBNB!<p>"
 
 if __name__ == "__main__":
-    """When the funtion is called"""
-    app.run(0.0.0.0:5000)
+    app.run(host="0.0.0.0", port=5000)
