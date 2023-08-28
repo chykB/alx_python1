@@ -3,6 +3,7 @@
 from flask import Flask
 app = Flask(__name__)
 
+"""the route to home page"""
 @app.route("/")
 def hello():
     """the route to home page"""
