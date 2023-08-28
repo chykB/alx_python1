@@ -15,4 +15,5 @@ def hello():
     return "<p>Hello HBNB!<p>"
 
 if __name__ == "__main__":
+    """When the funtion is called"""
     app.run(0.0.0.0:5000)
