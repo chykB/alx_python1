@@ -27,6 +27,7 @@ def text_display(text):
     text = text.replace('_', ' ')
     return "C {}".format(text)
 
+@app.route("/python/")
 @app.route("/python/<text>")
 def display_text(text="is cool"):
     text_with_spaces = text_wth_spaces.replace('_', ' ')
