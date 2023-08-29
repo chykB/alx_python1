@@ -41,13 +41,13 @@ def display_number(n):
 def display_templates(n):
     return render_template("5-number.html", number=n)
 
-@app.route("/number_odd_or_even/<int:n>")
+@app.route("/number_odd_or_even/<int:n>", strict_slashes=False)
 def even_or_odd(n):
-    if n % 2 == 0:
-        result = "even"
-    else:
-        result = "odd"
-    return "6-number_odd_or_even.html", number=n
+    """ 
+    Display a HTML page with the number's odd/even status using a template.
+    """
+    result = "even" if n % 2 == 0 else "odd"
+    return "6-number_odd_or_even.html", number=n, result=result
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
