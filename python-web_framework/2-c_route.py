@@ -19,7 +19,11 @@ def hbnb():
     return "HBNB"
 
 @app.route("/c/<text>")
-def c():
+def text_display(text):
+    """
+    Display "C " followed by the value of the text variable.
+    Replace underscores with spaces
+    """
     text = text.replace('_', ' ')
     return "C {}".format(text)
 
