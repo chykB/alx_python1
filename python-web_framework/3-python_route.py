@@ -30,7 +30,7 @@ def text_display(text):
 @app.route("/python/")
 @app.route("/python/<text>")
 def display_text(text="is cool"):
-    text_with_spaces = text_wth_spaces.replace('_', ' ')
+    text_with_spaces = text.replace('_', ' ')
     return "Python {}".format(text_with_spaces)
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
