@@ -15,6 +15,23 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
 
+
+    @property
+    def width(self):
+        """The getter method for width"""
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """The setter method for width"""
+        if type(value) is int:
+            if value < 0:
+                raise ValueError("width must be >= 0")
+            else:
+                self.__width = value
+        else:
+            raise TypeError("width must be an integer")
+
     @property
     def width(self):
         """The getter method for width"""
