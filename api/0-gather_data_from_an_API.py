@@ -17,17 +17,17 @@ if employee_response.status_code != 200 or todos_response.status_code != 200:
 
 employee_data = employee_response.json()
 todo_data = todos_response.json()
-employee_name = employee_data.get("name", "")
+employee_name = employee_data.get("name", "anonymous employee")
 
-tasks_completed = 0
-total_tasks = 0
+number_of_done_tasks = 0
+total_number_of_tasks = 0
 for task in todo_data:
     if task["completed"]:
-        tasks_completed += 1
-    total_tasks += 1
+        number_of_done_tasks += 1
+    total_number_of_tasks += 1
 
 
-print(f"Employee {employee_name} is done with tasks ({tasks_completed}/{total_tasks}):")
+print(f"Employee {employee_name} is done with tasks ({number_of_done_tasks}/{total_number_of_tasks}):")
 
 for task in todo_data:
     print(f"\t{task['title']}")
