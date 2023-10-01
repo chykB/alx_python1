@@ -33,3 +33,5 @@ for task in todo_data:
         csv_writer.writerow([employee_id, employee_username, task_completed_status, task["title"]])
 
 
+with open(csv_filename, 'r') as f:
+     pass
