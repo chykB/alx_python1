@@ -1,6 +1,10 @@
 import requests
 import sys
 import json
+"""
+Module Name: requests, json, sys
+Description: This module provides functions for network call, command line argument and writing json files
+"""
 
 if len(sys.argv) != 2:
     sys.exit(1)
